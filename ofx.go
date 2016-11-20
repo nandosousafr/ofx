@@ -136,6 +136,9 @@ func Parse(f io.Reader) (*Ofx, error) {
 
 			case "NAME":
 				next = transDesc
+
+			case "MEMO":
+				next = transDesc
 			}
 
 		case xml.CharData:
